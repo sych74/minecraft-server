@@ -7,7 +7,7 @@ homepage: https://github.com/jelastic-jps/minecraft-server
 
 logo: ${baseUrl}/images/minecraft-logo-90px.png
 
-baseUrl: https://raw.githubusercontent.com/sych74/minecraft-server
+baseUrl: https://raw.githubusercontent.com/sych74/minecraft-server/master
 
 license:
   terms:
@@ -33,7 +33,7 @@ actions:
     cmd [cp]: |-
       echo "eula=true" > /data/eula.txt
       sed  -i "/usermod\|groupmod/d" /start
-      apk add screen
+      apt update && apt install -y screen
       wget ${baseUrl}/properties/server.properties -O /data/server.properties
       wget ${baseUrl}/lib/jelastic-gc-agent.jar -O /data/jelastic-gc-agent.jar
       wget ${baseUrl}/scripts/memoryConfig.sh -O /data/memoryConfig.sh
