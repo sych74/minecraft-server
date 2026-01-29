@@ -25,7 +25,7 @@ actions:
   
   sendEmail:
     install:
-      jps: ${baseUrl}/addons/sendEmail.yml
+      jps: ${baseUrl}/addons/sendEmail.jps
       settings:
         url: ${this.url}
   
@@ -33,7 +33,7 @@ actions:
     cmd [cp]: |-
       echo "eula=true" > /data/eula.txt
       sed  -i "/usermod\|groupmod/d" /start
-      DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y screen
+      apk add screen
       wget ${baseUrl}/properties/server.properties -O /data/server.properties
       wget ${baseUrl}/lib/jelastic-gc-agent.jar -O /data/jelastic-gc-agent.jar
       wget ${baseUrl}/scripts/memoryConfig.sh -O /data/memoryConfig.sh
