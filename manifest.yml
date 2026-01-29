@@ -14,7 +14,7 @@ license:
     en: "I agree with <a href='https://account.mojang.com/documents/minecraft_eula' target='_blank'><u>terms of service</u></a>"
 
 nodes:
-  - image: itzg/minecraft-server
+  - image: itzg/minecraft-server:1.1.0
     env:
       EULA: "TRUE"
     entryPoint: /start-server.sh
@@ -25,7 +25,7 @@ actions:
   
   sendEmail:
     install:
-      jps: ${baseUrl}/addons/sendEmail.jps
+      jps: /addons/sendEmail.yml
       settings:
         url: ${this.url}
   
@@ -47,7 +47,7 @@ actions:
     user: minecraft
   
   addEndpoint:
-    script: ${baseUrl}/scripts/addEndpoint.js
+    script: /scripts/addEndpoint.js
     params:
       nodeId: ${nodes.cp.first.id}
       port: 25565
