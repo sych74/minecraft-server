@@ -7,7 +7,7 @@ homepage: https://github.com/jelastic-jps/minecraft-server
 
 logo: ${baseUrl}/images/minecraft-logo-90px.png
 
-baseUrl: https://raw.githubusercontent.com/sych74/minecraft-server/master
+baseUrl: https://raw.githubusercontent.com/jelastic-jps/minecraft-server/master
 
 license:
   terms: I agree with <a href='https://account.mojang.com/documents/minecraft_eula' target='_blank'><u>terms of service</u></a>
