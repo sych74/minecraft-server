@@ -10,8 +10,7 @@ logo: ${baseUrl}/images/minecraft-logo-90px.png
 baseUrl: https://raw.githubusercontent.com/sych74/minecraft-server/master
 
 license:
-  terms:
-    en: "I agree with <a href='https://account.mojang.com/documents/minecraft_eula' target='_blank'><u>terms of service</u></a>"
+  terms: I agree with <a href='https://account.mojang.com/documents/minecraft_eula' target='_blank'><u>terms of service</u></a>
 
 nodes:
   - image: itzg/minecraft-server:1.1.0
