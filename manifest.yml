@@ -33,7 +33,7 @@ actions:
     cmd [cp]: |-
       echo "eula=true" > /data/eula.txt
       sed  -i "/usermod\|groupmod/d" /start
-      apt update && apt install -y screen
+      DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y screen
       wget ${baseUrl}/properties/server.properties -O /data/server.properties
       wget ${baseUrl}/lib/jelastic-gc-agent.jar -O /data/jelastic-gc-agent.jar
       wget ${baseUrl}/scripts/memoryConfig.sh -O /data/memoryConfig.sh
